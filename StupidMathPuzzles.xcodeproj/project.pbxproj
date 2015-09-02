@@ -47,6 +47,7 @@
 		9F9477511B974B8900172E9E /* StupidMathPuzzlesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StupidMathPuzzlesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9477551B974B8900172E9E /* StupidMathPuzzlesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StupidMathPuzzlesUITests.swift; sourceTree = "<group>"; };
 		9F9477571B974B8900172E9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F9477631B974BF600172E9E /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +104,7 @@
 				9F94773C1B974B8800172E9E /* Assets.xcassets */,
 				9F94773E1B974B8800172E9E /* LaunchScreen.storyboard */,
 				9F9477411B974B8800172E9E /* Info.plist */,
+				9F9477631B974BF600172E9E /* MyPlayground.playground */,
 			);
 			path = StupidMathPuzzles;
 			sourceTree = "<group>";
