@@ -3,8 +3,30 @@
 import UIKit
 import Foundation
 
-var str = "Hello, playground"
-str
+extension Set {
+    static func numbers() -> Set {
+        return Set()
+    }
+}
+
+var str = "hello Playground"
+var ch : Character
+var str2 = ""
+
+for var i = 0; i < str.characters.count; i++ {
+    let index = str.startIndex.advancedBy(i)
+    ch = str[index]
+    
+    if "\(ch)" == " " {
+        continue
+    } else if ("\(ch)" != "\(ch)".uppercaseString) || NSCharacterSet.letterCharacterSet().longCharacterIsMember(ch) {
+        str2.append(ch)
+    } else {
+        str2 += i != 0 ? " " : ""
+        str2.append(ch)
+    }
+}
+print(str2.capitalizedString)
 
 
 //Runs automatically. Just start typing.
