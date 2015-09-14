@@ -12,9 +12,9 @@ class Puzzle {
     
     static let sharedInstance = Puzzle()
     
-    var current : list?
+    var current : list!
     
-    enum list : Int{
+    enum list : Int {
         case factorial = 0, fizzBuzz
         
         static var all : [list] = [.factorial, .fizzBuzz]
@@ -29,7 +29,9 @@ class Puzzle {
     func fizzBuzz(fizz f: Int, buzz b: Int, limit l: Int) -> [String]  {
         var strings = [String]()
         for that in l.seqTo() {
-            if that % f == 0 && that % b == 0 {
+            if that == 0 {
+                strings.append("\(that)")
+            } else if that % f == 0 && that % b == 0 {
                 strings.append("FB")
             } else if that % b == 0 {
                 strings.append("B")
@@ -42,3 +44,5 @@ class Puzzle {
         return strings
     }
 }
+
+let puzzle = Puzzle.sharedInstance

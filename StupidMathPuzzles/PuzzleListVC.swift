@@ -15,16 +15,13 @@ class PuzzleListVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.automaticallyAdjustsScrollViewInsets = false;
     }
     
+    
     // MARK: - TVC Delegates
+    
+    // Cells
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Puzzle.list.all.count
     }
@@ -42,5 +39,13 @@ class PuzzleListVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         performSegueWithIdentifier("pSegue", sender: self)
         
     }
+    // Headers
+//    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        return 1
+//    }
+    
+//    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return "\(section)"
+//    }
 }
 

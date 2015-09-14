@@ -13,21 +13,30 @@
                         <viewControllerLayoutGuide type="top" id="hAR-5a-jqQ"/>
                         <viewControllerLayoutGuide type="bottom" id="0x5-ga-SDO"/>
                     </layoutGuides>
-                    <view key="view" clipsSubviews="YES" contentMode="scaleAspectFill" id="Tg4-dB-9Fa">
+                    <view key="view" hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFill" id="Tg4-dB-9Fa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vaB-UP-TDD">
-                                <rect key="frame" x="20" y="28" width="560" height="164"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vaB-UP-TDD">
+                                <rect key="frame" x="20" y="28" width="560" height="564"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FrU-FY-FuC">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="textField" label="textField"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvO-5D-0sB">
-                                        <rect key="frame" x="0.0" y="30" width="560" height="134"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="iZb-IR-1NR" customClass="PuzzleInputV" customModule="StupidMathPuzzles" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kzk-XZ-PH4">
+                                                <rect key="frame" x="0.0" y="0.0" width="278" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PDE-jU-sCy">
+                                                <rect key="frame" x="282" y="0.0" width="278" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvO-5D-0sB">
+                                        <rect key="frame" x="0.0" y="50" width="560" height="514"/>
                                         <accessibility key="accessibilityConfiguration" identifier="textView" label="textView"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -40,10 +49,17 @@
                         <accessibility key="accessibilityConfiguration" identifier="mainView" label="mainView">
                             <bool key="isElement" value="YES"/>
                         </accessibility>
+                        <constraints>
+                            <constraint firstItem="vaB-UP-TDD" firstAttribute="top" secondItem="hAR-5a-jqQ" secondAttribute="bottom" constant="8" symbolic="YES" id="5iy-aN-sW4"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="vaB-UP-TDD" secondAttribute="leading" id="IZb-Wx-h8k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vaB-UP-TDD" secondAttribute="trailing" id="ZTU-fv-hfl"/>
+                            <constraint firstItem="0x5-ga-SDO" firstAttribute="top" secondItem="vaB-UP-TDD" secondAttribute="bottom" constant="8" symbolic="YES" id="h65-Ds-iEW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0Vp-oX-qvQ"/>
                     <connections>
-                        <outlet property="textField" destination="FrU-FY-FuC" id="vA0-C9-cSG"/>
+                        <outlet property="inputLine" destination="iZb-IR-1NR" id="Kj0-mc-fVc"/>
+                        <outlet property="stackView" destination="vaB-UP-TDD" id="XNM-73-lX3"/>
                         <outlet property="textView" destination="gvO-5D-0sB" id="nPv-he-Y3u"/>
                     </connections>
                 </viewController>
@@ -79,58 +95,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="z5f-SV-txZ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gcF-6B-SGy">
                                 <rect key="frame" x="20" y="72" width="560" height="508"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TW5-o4-qmA">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="508"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pCell" textLabel="eXj-l3-5bK" detailTextLabel="IN8-Ze-c8s" style="IBUITableViewCellStyleSubtitle" id="qUo-W5-jDu">
-                                                <rect key="frame" x="0.0" y="92" width="560" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qUo-W5-jDu" id="A6T-ED-aLY">
-                                                    <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eXj-l3-5bK">
-                                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IN8-Ze-c8s">
-                                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </tableViewCellContentView>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            </tableViewCell>
-                                        </prototypes>
-                                        <connections>
-                                            <outlet property="dataSource" destination="EuM-ps-dgc" id="iat-vL-b1v"/>
-                                            <outlet property="delegate" destination="EuM-ps-dgc" id="cEM-LD-Zd4"/>
-                                        </connections>
-                                    </tableView>
-                                </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="pCell" textLabel="Tx4-gp-bf8" detailTextLabel="rLe-bl-kMJ" style="IBUITableViewCellStyleSubtitle" id="nMY-Rh-WFp">
+                                        <rect key="frame" x="0.0" y="92" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nMY-Rh-WFp" id="n4c-AQ-lKz">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tx4-gp-bf8">
+                                                    <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rLe-bl-kMJ">
+                                                    <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="EuM-ps-dgc" id="VKb-MC-4Ta"/>
+                                    <outlet property="delegate" destination="EuM-ps-dgc" id="WEY-CB-3mr"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="z5f-SV-txZ" firstAttribute="top" secondItem="9VN-sS-wKw" secondAttribute="bottom" constant="8" id="NrC-XX-ZLT"/>
-                            <constraint firstItem="7Lr-Ng-88J" firstAttribute="top" secondItem="z5f-SV-txZ" secondAttribute="bottom" constant="20" id="O3i-YC-bRy"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="z5f-SV-txZ" secondAttribute="leading" id="o6C-5E-oZU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="z5f-SV-txZ" secondAttribute="trailing" id="voE-iW-jSc"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="gcF-6B-SGy" secondAttribute="leading" id="Cs4-LR-aPi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gcF-6B-SGy" secondAttribute="trailing" id="FXO-Sk-1C0"/>
+                            <constraint firstItem="gcF-6B-SGy" firstAttribute="top" secondItem="9VN-sS-wKw" secondAttribute="bottom" constant="8" symbolic="YES" id="a9f-ep-2Ko"/>
+                            <constraint firstItem="7Lr-Ng-88J" firstAttribute="top" secondItem="gcF-6B-SGy" secondAttribute="bottom" constant="20" id="xmh-S4-hMf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Stupid Puzzles" id="7UQ-4I-hAp"/>
                     <connections>
-                        <outlet property="tableView" destination="TW5-o4-qmA" id="6jE-kt-EOv"/>
+                        <outlet property="tableView" destination="gcF-6B-SGy" id="ODO-sk-CFg"/>
                         <segue destination="FTC-1B-QsY" kind="showDetail" identifier="pSegue" id="4Ix-xG-pbd"/>
                     </connections>
                 </viewController>
@@ -171,6 +182,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rEl-HJ-vP9"/>
+        <segue reference="4Ix-xG-pbd"/>
     </inferredMetricsTieBreakers>
 </document>

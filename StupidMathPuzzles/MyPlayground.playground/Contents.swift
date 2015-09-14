@@ -3,31 +3,6 @@
 import UIKit
 import Foundation
 
-extension Set {
-    static func numbers() -> Set {
-        return Set()
-    }
-}
-
-var str = "hello Playground"
-var ch : Character
-var str2 = ""
-
-for var i = 0; i < str.characters.count; i++ {
-    let index = str.startIndex.advancedBy(i)
-    ch = str[index]
-    
-    if "\(ch)" == " " {
-        continue
-    } else if ("\(ch)" != "\(ch)".uppercaseString) || NSCharacterSet.letterCharacterSet().longCharacterIsMember(ch) {
-        str2.append(ch)
-    } else {
-        str2 += i != 0 ? " " : ""
-        str2.append(ch)
-    }
-}
-print(str2.capitalizedString)
-
 
 //Runs automatically. Just start typing.
 //See "About" for shortcuts
@@ -41,9 +16,49 @@ extension Int {
         }
         return arr
     }
+    
+    func numsDown() -> [Int] {
+        var arr = [Int]()
+        for i in 0...self {
+            arr.insert(i, atIndex: arr.startIndex)
+        }
+        
+        return arr
+    }
+    
+    var listTo : [Int] {
+        get {
+            var arr = [Int]()
+            for i in 0...self {
+                arr.insert(i, atIndex: (i == 0) ? arr.startIndex : 1)
+            }
+            
+            return arr
+        }
+    }
 }
 
 extension Array {
+    
+    var fact : Int? {
+        get {
+            var notInts : Bool {
+                get {
+                    for item in self {
+                        if item.dynamicType != Swift.Int {
+                            return true
+                        }
+                    }
+                    return false
+                }
+            }
+            
+            if notInts {
+                return nil
+            }
+            return notInts ? 0 : 1
+        }
+    }
     
     func factorial() -> Int? {
         var sum = 0
@@ -85,6 +100,11 @@ func fizzBuzz(x: Int, _ y: Int,
 }
 
 print(fizzBuzz(4, 7, 30))
-print(5.seqTo().factorial()!)
-print([0].factorial()!)
-print([1].factorial()!)
+print(5.seqTo().factorial()! as! Int)
+print(5.seqTo().fact! as? Int)
+print([0].factorial()! as! Int)
+print([1].factorial()! as! Int)
+
+5.seqTo()
+5.numsDown()
+5.listTo

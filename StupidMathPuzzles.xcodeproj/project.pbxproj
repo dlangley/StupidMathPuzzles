@@ -17,6 +17,7 @@
 		9FF8C5761B99001A00575797 /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8C5751B99001A00575797 /* Puzzle.swift */; settings = {ASSET_TAGS = (); }; };
 		9FF8C5781B9A15D600575797 /* PuzzleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8C5771B9A15D600575797 /* PuzzleDetailVC.swift */; settings = {ASSET_TAGS = (); }; };
 		9FF8C57A1B9A189900575797 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8C5791B9A189900575797 /* Utility.swift */; settings = {ASSET_TAGS = (); }; };
+		9FF8C6101BA1E67700575797 /* PuzzleInputV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8C60F1BA1E67700575797 /* PuzzleInputV.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		9FF8C5751B99001A00575797 /* Puzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puzzle.swift; sourceTree = "<group>"; };
 		9FF8C5771B9A15D600575797 /* PuzzleDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleDetailVC.swift; sourceTree = "<group>"; };
 		9FF8C5791B9A189900575797 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		9FF8C60F1BA1E67700575797 /* PuzzleInputV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleInputV.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				9FF8C5751B99001A00575797 /* Puzzle.swift */,
 				9F9477371B974B8800172E9E /* PuzzleListVC.swift */,
 				9FF8C5771B9A15D600575797 /* PuzzleDetailVC.swift */,
+				9FF8C60F1BA1E67700575797 /* PuzzleInputV.swift */,
 				9FF8C5791B9A189900575797 /* Utility.swift */,
 				9F9477391B974B8800172E9E /* Main.storyboard */,
 				9F94773C1B974B8800172E9E /* Assets.xcassets */,
@@ -271,6 +274,7 @@
 				9FF8C5781B9A15D600575797 /* PuzzleDetailVC.swift in Sources */,
 				9F9477381B974B8800172E9E /* PuzzleListVC.swift in Sources */,
 				9F9477361B974B8800172E9E /* AppDelegate.swift in Sources */,
+				9FF8C6101BA1E67700575797 /* PuzzleInputV.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
