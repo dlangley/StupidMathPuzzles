@@ -14,6 +14,7 @@
 		9F9477401B974B8800172E9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F94773E1B974B8800172E9E /* LaunchScreen.storyboard */; };
 		9F94774B1B974B8800172E9E /* StupidMathPuzzlesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F94774A1B974B8800172E9E /* StupidMathPuzzlesTests.swift */; };
 		9F9477561B974B8900172E9E /* StupidMathPuzzlesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9477551B974B8900172E9E /* StupidMathPuzzlesUITests.swift */; };
+		9FA07AC11BAB63F2004EEB42 /* InputStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA07AC01BAB63F2004EEB42 /* InputStacks.swift */; settings = {ASSET_TAGS = (); }; };
 		9FF8C5761B99001A00575797 /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8C5751B99001A00575797 /* Puzzle.swift */; settings = {ASSET_TAGS = (); }; };
 		9FF8C5781B9A15D600575797 /* PuzzleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8C5771B9A15D600575797 /* PuzzleDetailVC.swift */; settings = {ASSET_TAGS = (); }; };
 		9FF8C57A1B9A189900575797 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8C5791B9A189900575797 /* Utility.swift */; settings = {ASSET_TAGS = (); }; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F15E6941BAB6B950006AD6D /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		9F9477321B974B8800172E9E /* StupidMathPuzzles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StupidMathPuzzles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9477351B974B8800172E9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F9477371B974B8800172E9E /* PuzzleListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleListVC.swift; sourceTree = "<group>"; };
@@ -51,7 +53,7 @@
 		9F9477511B974B8900172E9E /* StupidMathPuzzlesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StupidMathPuzzlesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9477551B974B8900172E9E /* StupidMathPuzzlesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StupidMathPuzzlesUITests.swift; sourceTree = "<group>"; };
 		9F9477571B974B8900172E9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F9477631B974BF600172E9E /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		9FA07AC01BAB63F2004EEB42 /* InputStacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputStacks.swift; sourceTree = "<group>"; };
 		9FF8C5751B99001A00575797 /* Puzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puzzle.swift; sourceTree = "<group>"; };
 		9FF8C5771B9A15D600575797 /* PuzzleDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleDetailVC.swift; sourceTree = "<group>"; };
 		9FF8C5791B9A189900575797 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
@@ -106,17 +108,10 @@
 		9F9477341B974B8800172E9E /* StupidMathPuzzles */ = {
 			isa = PBXGroup;
 			children = (
-				9F9477351B974B8800172E9E /* AppDelegate.swift */,
-				9FF8C5751B99001A00575797 /* Puzzle.swift */,
-				9F9477371B974B8800172E9E /* PuzzleListVC.swift */,
-				9FF8C5771B9A15D600575797 /* PuzzleDetailVC.swift */,
-				9FF8C60F1BA1E67700575797 /* PuzzleInputV.swift */,
-				9FF8C5791B9A189900575797 /* Utility.swift */,
-				9F9477391B974B8800172E9E /* Main.storyboard */,
-				9F94773C1B974B8800172E9E /* Assets.xcassets */,
-				9F94773E1B974B8800172E9E /* LaunchScreen.storyboard */,
-				9F9477411B974B8800172E9E /* Info.plist */,
-				9F9477631B974BF600172E9E /* MyPlayground.playground */,
+				9FA07ABC1BAB4623004EEB42 /* Model */,
+				9FA07ABA1BAB45B3004EEB42 /* View */,
+				9FA07ABD1BAB4633004EEB42 /* Controller */,
+				9F15E6941BAB6B950006AD6D /* MyPlayground.playground */,
 			);
 			path = StupidMathPuzzles;
 			sourceTree = "<group>";
@@ -137,6 +132,54 @@
 				9F9477571B974B8900172E9E /* Info.plist */,
 			);
 			path = StupidMathPuzzlesUITests;
+			sourceTree = "<group>";
+		};
+		9FA07AB91BAB4581004EEB42 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				9F9477391B974B8800172E9E /* Main.storyboard */,
+				9F94773E1B974B8800172E9E /* LaunchScreen.storyboard */,
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
+		9FA07ABA1BAB45B3004EEB42 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9FA07ABB1BAB45C4004EEB42 /* Code */,
+				9FA07AB91BAB4581004EEB42 /* Interfaces */,
+				9F94773C1B974B8800172E9E /* Assets.xcassets */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9FA07ABB1BAB45C4004EEB42 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				9FF8C60F1BA1E67700575797 /* PuzzleInputV.swift */,
+				9FA07AC01BAB63F2004EEB42 /* InputStacks.swift */,
+			);
+			name = Code;
+			sourceTree = "<group>";
+		};
+		9FA07ABC1BAB4623004EEB42 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FF8C5791B9A189900575797 /* Utility.swift */,
+				9FF8C5751B99001A00575797 /* Puzzle.swift */,
+				9F9477411B974B8800172E9E /* Info.plist */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9FA07ABD1BAB4633004EEB42 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F9477351B974B8800172E9E /* AppDelegate.swift */,
+				9F9477371B974B8800172E9E /* PuzzleListVC.swift */,
+				9FF8C5771B9A15D600575797 /* PuzzleDetailVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +317,7 @@
 				9FF8C5781B9A15D600575797 /* PuzzleDetailVC.swift in Sources */,
 				9F9477381B974B8800172E9E /* PuzzleListVC.swift in Sources */,
 				9F9477361B974B8800172E9E /* AppDelegate.swift in Sources */,
+				9FA07AC11BAB63F2004EEB42 /* InputStacks.swift in Sources */,
 				9FF8C6101BA1E67700575797 /* PuzzleInputV.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,7 +413,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -407,6 +451,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

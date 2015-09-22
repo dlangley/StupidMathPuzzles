@@ -8,40 +8,15 @@
 
 import Foundation
 
-extension Array {
-    var factorial : Int? {
+
+extension Int {
+    var list : [Int] {
         get {
-            var sum = 0
-            if !self.isEmpty {
-                for var that = 0; that < self.count; that++ {
-                    if self[that].dynamicType == Swift.Int {
-                        if (self[that] as! Int) < 0 {
-                            return nil
-                        } else if (self.count == 1) && ((self[that] as! Int) == 0) {
-                            return 1
-                        }
-                        sum = sum + (self[that] as! Int)
-                    } else {
-                        return nil
-                    }
-                }
-            } else {
-                return nil
-            }
-            return sum
+            return self > 1 ? (self - 1).list + [self] : [1]
         }
     }
 }
 
-extension Int {
-    func seqTo() -> [Int] {
-        var arr = [Int]()
-        for var i = 0; i <= self; i++ {
-            arr.append(i)
-        }
-        return arr
-    }
-}
 
 extension String {
     var titleString : String {

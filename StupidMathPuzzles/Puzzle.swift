@@ -26,22 +26,22 @@ class Puzzle {
         }
     }
     
-    func fizzBuzz(fizz f: Int, buzz b: Int, limit l: Int) -> [String]  {
-        var strings = [String]()
-        for that in l.seqTo() {
-            if that == 0 {
-                strings.append("\(that)")
-            } else if that % f == 0 && that % b == 0 {
-                strings.append("FB")
-            } else if that % b == 0 {
-                strings.append("B")
-            } else if that % f == 0 {
-                strings.append("F")
-            } else {
-                strings.append("\(that)")
-            }
+    func fizzBuzz(fizz f: Int = Int.max, buzz b: Int = Int.max, limit l: Int = 0) -> [String]  {
+        switch l {
+        case 0: return ["\(l)"]
+        case let check where check % f == 0 && check % b == 0: return fizzBuzz(fizz: f, buzz: b, limit: l-1) + ["FB"]
+        case let check where check % f == 0: return fizzBuzz(fizz: f, buzz: b, limit: l-1) + ["F"]
+        case let check where check % b == 0: return fizzBuzz(fizz: f, buzz: b, limit: l-1) + ["B"]
+        default: return fizzBuzz(fizz: f, buzz: b, limit: l-1) + ["\(l)"]
         }
-        return strings
+    }
+}
+
+extension Double {
+    var factorial : Double {
+        get {
+            return self > 1 ? self * (self - 1).factorial : 1
+        }
     }
 }
 

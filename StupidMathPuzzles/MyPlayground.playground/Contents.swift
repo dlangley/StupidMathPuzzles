@@ -1,110 +1,62 @@
 //: Playground - noun: a place where people can play
 
-import UIKit
-import Foundation
+import Cocoa
 
+var str = "Hello, playground"
 
-//Runs automatically. Just start typing.
-//See "About" for shortcuts
+var k : Double = 0x1
+
+var n : Double = ((1/(pow(16.0, k)))*(4/((8*k) + 1) - 2/((8*k) + 4) - 1/((8*k) + 5) - 1/((8*k) + 6)))
+
+var f = n
+
+var t = pow(2.0, -3)
+
 
 extension Int {
-    
-    func seqTo() -> [Int] {
-        var arr = [Int]()
-        for var i = 1; i <= self; i++ {
-            arr.append(i)
+    var factorial : Int {
+        get {
+            return self > 1 ? self * (self - 1).factorial : 1
         }
-        return arr
     }
     
-    func numsDown() -> [Int] {
-        var arr = [Int]()
-        for i in 0...self {
-            arr.insert(i, atIndex: arr.startIndex)
+    var list : [Int] {
+        get {
+            return self > 1 ? (self - 1).list + [self] : [1]
         }
-        
-        return arr
     }
     
-    var listTo : [Int] {
+    var digits : [Int] {
         get {
             var arr = [Int]()
-            for i in 0...self {
-                arr.insert(i, atIndex: (i == 0) ? arr.startIndex : 1)
+            var string = "\(self)"
+            for ch in string.characters {
+                arr += [Int("\(ch)")!]
             }
-            
             return arr
         }
     }
 }
 
-extension Array {
-    
-    var fact : Int? {
+extension Double {
+    var factorial : Double {
         get {
-            var notInts : Bool {
-                get {
-                    for item in self {
-                        if item.dynamicType != Swift.Int {
-                            return true
-                        }
-                    }
-                    return false
-                }
-            }
-            
-            if notInts {
-                return nil
-            }
-            return notInts ? 0 : 1
+            return self > 1 ? self * (self - 1).factorial : 1
         }
-    }
-    
-    func factorial() -> Int? {
-        var sum = 0
-        if !self.isEmpty {
-            for var that = 0; that < self.count; that++ {
-                if self[that].dynamicType == Swift.Int {
-                    if (self[that] as! Int) < 0 {
-                        return nil
-                    } else if (self.count == 1) && ((self[that] as! Int) == 0) {
-                        return 1
-                    }
-                    sum = sum + (self[that] as! Int)
-                } else {
-                    return nil
-                }
-            }
-        } else {
-            return nil
-        }
-        return sum
     }
 }
 
-func fizzBuzz(x: Int, _ y: Int,
-    _ n: Int) -> [String]  {
-        var strings = [String]()
-        for that in n.seqTo() {
-            if that % x == 0 && that % y == 0 {
-                strings.append("FB")
-            } else if that % y == 0 {
-                strings.append("B")
-            } else if that % x == 0 {
-                strings.append("F")
-            } else {
-                strings.append("\(that)")
-            }
-        }
-        return strings
-}
 
-print(fizzBuzz(4, 7, 30))
-print(5.seqTo().factorial()! as! Int)
-print(5.seqTo().fact! as? Int)
-print([0].factorial()! as! Int)
-print([1].factorial()! as! Int)
+var i = 150.0
 
-5.seqTo()
-5.numsDown()
-5.listTo
+//i.list
+i.factorial
+//i.factorial.digits
+
+let nestedArray = [[1,2,3], [4,5,6]]
+
+let flattenedArray = nestedArray.flatMap { $0 }
+flattenedArray // [1, 2, 3, 4, 5, 6]
+
+
+Int.max
