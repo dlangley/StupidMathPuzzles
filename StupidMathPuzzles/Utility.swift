@@ -37,3 +37,23 @@ extension String {
         }
     }
 }
+
+
+class pMath {
+    private var opStack = [Op]()
+    
+    private enum Op {
+        case opperand([Int])
+        case plus(augend : [Int], addend : [Int])
+        case minus(minuend : [Int], subtrahend : [Int])
+        case times(multiplicand : [Int], multiplier : [Int])
+        case divideBy(dividend : [Int], divisor : [Int])
+    }
+    
+    
+    
+    func eval() -> [Int] {
+        return [Int]()
+    }
+    
+}
