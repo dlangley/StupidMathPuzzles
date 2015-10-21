@@ -17,25 +17,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vaB-UP-TDD">
+                            <stackView opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vaB-UP-TDD">
                                 <rect key="frame" x="20" y="28" width="560" height="564"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="iZb-IR-1NR" customClass="PuzzleInputV" customModule="StupidMathPuzzles" customModuleProvider="target">
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" misplaced="YES" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="iZb-IR-1NR" customClass="PuzzleInputV" customModule="StupidMathPuzzles" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="50"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kzk-XZ-PH4">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kzk-XZ-PH4">
                                                 <rect key="frame" x="0.0" y="0.0" width="278" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PDE-jU-sCy">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PDE-jU-sCy">
                                                 <rect key="frame" x="282" y="0.0" width="278" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvO-5D-0sB">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvO-5D-0sB">
                                         <rect key="frame" x="0.0" y="50" width="560" height="514"/>
                                         <accessibility key="accessibilityConfiguration" identifier="textView" label="textView"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -76,78 +76,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="EuM-ps-dgc" kind="relationship" relationship="rootViewController" id="jNH-oQ-JI0"/>
+                        <segue destination="eJH-w3-J6c" kind="relationship" relationship="rootViewController" id="KME-cj-Acp"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6c-hu-XE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="204" y="-339"/>
-        </scene>
-        <!--Stupid Puzzles-->
-        <scene sceneID="a0L-8I-PKb">
-            <objects>
-                <viewController id="EuM-ps-dgc" customClass="PuzzleListVC" customModule="StupidMathPuzzles" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9VN-sS-wKw"/>
-                        <viewControllerLayoutGuide type="bottom" id="7Lr-Ng-88J"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleAspectFill" id="ofz-AZ-b8c">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gcF-6B-SGy">
-                                <rect key="frame" x="20" y="72" width="560" height="508"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="pCell" textLabel="Tx4-gp-bf8" detailTextLabel="rLe-bl-kMJ" style="IBUITableViewCellStyleSubtitle" id="nMY-Rh-WFp">
-                                        <rect key="frame" x="0.0" y="92" width="560" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nMY-Rh-WFp" id="n4c-AQ-lKz">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tx4-gp-bf8">
-                                                    <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rLe-bl-kMJ">
-                                                    <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <sections/>
-                                <connections>
-                                    <outlet property="dataSource" destination="EuM-ps-dgc" id="VKb-MC-4Ta"/>
-                                    <outlet property="delegate" destination="EuM-ps-dgc" id="WEY-CB-3mr"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="gcF-6B-SGy" secondAttribute="leading" id="Cs4-LR-aPi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gcF-6B-SGy" secondAttribute="trailing" id="FXO-Sk-1C0"/>
-                            <constraint firstItem="gcF-6B-SGy" firstAttribute="top" secondItem="9VN-sS-wKw" secondAttribute="bottom" constant="8" symbolic="YES" id="a9f-ep-2Ko"/>
-                            <constraint firstItem="7Lr-Ng-88J" firstAttribute="top" secondItem="gcF-6B-SGy" secondAttribute="bottom" constant="20" id="xmh-S4-hMf"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Stupid Puzzles" id="7UQ-4I-hAp"/>
-                    <connections>
-                        <outlet property="tableView" destination="gcF-6B-SGy" id="ODO-sk-CFg"/>
-                        <segue destination="FTC-1B-QsY" kind="showDetail" identifier="pSegue" id="4Ix-xG-pbd"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yMD-kb-eD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="928" y="-339"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="u6q-at-5vl">
@@ -180,8 +114,65 @@
             </objects>
             <point key="canvasLocation" x="204" y="408"/>
         </scene>
+        <!--Stupid Puzzles-->
+        <scene sceneID="g4q-0X-UUY">
+            <objects>
+                <collectionViewController title="Stupid Puzzles" id="eJH-w3-J6c" customClass="SMPListCVC" customModule="StupidMathPuzzles" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" id="Lho-hd-P8A">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="QDA-V1-InV">
+                            <size key="itemSize" width="598" height="44"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="1" minY="1" maxX="1" maxY="1"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="Cell" id="rB7-HK-6gZ" customClass="SMPCell" customModule="StupidMathPuzzles" customModuleProvider="target">
+                                <rect key="frame" x="1" y="65" width="598" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="598" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORD!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nm-d7-6Xq">
+                                            <rect key="frame" x="10" y="10" width="580" height="26"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="6Nm-d7-6Xq" firstAttribute="leading" secondItem="rB7-HK-6gZ" secondAttribute="leadingMargin" constant="2" id="UjH-Gl-8bS"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="6Nm-d7-6Xq" secondAttribute="trailing" id="Wca-br-eAs"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="6Nm-d7-6Xq" secondAttribute="bottom" id="gZJ-Ap-agT"/>
+                                    <constraint firstItem="6Nm-d7-6Xq" firstAttribute="top" secondItem="rB7-HK-6gZ" secondAttribute="topMargin" constant="2" id="rIL-2V-dlN"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="label" destination="6Nm-d7-6Xq" id="nqz-pR-7sB"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="eJH-w3-J6c" id="4Up-6W-Uml"/>
+                            <outlet property="delegate" destination="eJH-w3-J6c" id="SZi-Pm-PZS"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Stupid Puzzles" id="T4L-xZ-NA2"/>
+                    <connections>
+                        <segue destination="FTC-1B-QsY" kind="showDetail" identifier="pSegue" id="uyq-TW-L3N"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IYh-Ib-22r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928" y="-339"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4Ix-xG-pbd"/>
+        <segue reference="uyq-TW-L3N"/>
     </inferredMetricsTieBreakers>
 </document>

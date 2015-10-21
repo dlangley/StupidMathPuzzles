@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F4B4B511BD7DCA300EA1368 /* SMPListCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B4B501BD7DCA300EA1368 /* SMPListCVC.swift */; settings = {ASSET_TAGS = (); }; };
 		9F9477361B974B8800172E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9477351B974B8800172E9E /* AppDelegate.swift */; };
-		9F9477381B974B8800172E9E /* PuzzleListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9477371B974B8800172E9E /* PuzzleListVC.swift */; };
 		9F94773B1B974B8800172E9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9477391B974B8800172E9E /* Main.storyboard */; };
 		9F94773D1B974B8800172E9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F94773C1B974B8800172E9E /* Assets.xcassets */; };
 		9F9477401B974B8800172E9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F94773E1B974B8800172E9E /* LaunchScreen.storyboard */; };
@@ -40,9 +40,9 @@
 
 /* Begin PBXFileReference section */
 		9F15E6941BAB6B950006AD6D /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		9F4B4B501BD7DCA300EA1368 /* SMPListCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPListCVC.swift; sourceTree = "<group>"; };
 		9F9477321B974B8800172E9E /* StupidMathPuzzles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StupidMathPuzzles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9477351B974B8800172E9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F9477371B974B8800172E9E /* PuzzleListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleListVC.swift; sourceTree = "<group>"; };
 		9F94773A1B974B8800172E9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F94773C1B974B8800172E9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F94773F1B974B8800172E9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -176,8 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				9F9477351B974B8800172E9E /* AppDelegate.swift */,
-				9F9477371B974B8800172E9E /* PuzzleListVC.swift */,
 				9FF8C5771B9A15D600575797 /* PuzzleDetailVC.swift */,
+				9F4B4B501BD7DCA300EA1368 /* SMPListCVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -315,7 +315,7 @@
 				9FF8C57A1B9A189900575797 /* Utility.swift in Sources */,
 				9FF8C5761B99001A00575797 /* Puzzle.swift in Sources */,
 				9FF8C5781B9A15D600575797 /* PuzzleDetailVC.swift in Sources */,
-				9F9477381B974B8800172E9E /* PuzzleListVC.swift in Sources */,
+				9F4B4B511BD7DCA300EA1368 /* SMPListCVC.swift in Sources */,
 				9F9477361B974B8800172E9E /* AppDelegate.swift in Sources */,
 				9FA07AC11BAB63F2004EEB42 /* InputStacks.swift in Sources */,
 				9FF8C6101BA1E67700575797 /* PuzzleInputV.swift in Sources */,

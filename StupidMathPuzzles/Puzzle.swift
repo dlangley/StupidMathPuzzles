@@ -15,7 +15,8 @@ class Puzzle {
     var current : list!
     
     enum list : Int {
-        case factorial = 0, fizzBuzz
+        case factorial = 0, fizzBuzz, generic
+
         
         static var all : [list] = [.factorial, .fizzBuzz]
         
