@@ -80,8 +80,29 @@ class SMPListCVC: UICollectionViewController {
 
 }
 
-class SMPCell: UICollectionViewCell {
+@IBDesignable class SMPCell: UICollectionViewCell {
+    
     @IBOutlet var label: UILabel!
+    
+    @IBInspectable var bgColor : UIColor! {
+        willSet {
+            if backgroundView == nil {
+                let bg = UIView(frame: bounds)
+                backgroundView = bg
+            }
+            backgroundView!.backgroundColor = newValue
+        }
+    }
+    
+    @IBInspectable var sbgColor : UIColor! {
+        willSet {
+            if selectedBackgroundView == nil {
+                let sbg = UIView(frame: bounds)
+                selectedBackgroundView = sbg
+            }
+            selectedBackgroundView!.backgroundColor = newValue
+        }
+    }
     
     var text : String = "WORD!!!" {
         willSet {
@@ -100,5 +121,4 @@ class SMPCell: UICollectionViewCell {
             setNeedsDisplay()
         }
     }
-    
 }

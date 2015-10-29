@@ -27,6 +27,24 @@ class Puzzle {
         }
     }
     
+    /**
+     The *oh so popular* GOTO test method for RECURSION?!?!? (for some odd reason)
+     
+     # MYTH BUSTER!!!
+     **The SAME output is possible with a loop-based API.**
+     (With a negligible hit on memory in the scope of a list small enough to read on a device.)
+
+     *Therefore, this can ONLY be used as a Trolling Tool at **BEST** unless you specify the desired type of implementation in your "assessment".*
+     
+     ## Parameters
+     - **fizz: Int** -> the multiple to be replaced with "F".
+     - **buzz: Int** -> the multiple to be replaced with "B".
+     - **limit: Int** -> determines how long the list of numbers is.
+     
+     ## Returns
+     A modified list of numbers from 0 to the specified limit.
+     (Replaces "Fizz" multiples with "F", and "Buzz" multiples with "B")
+     */
     func fizzBuzz(fizz f: Int = Int.max, buzz b: Int = Int.max, limit l: Int = 0) -> [String]  {
         switch l {
         case 0: return ["\(l)"]
