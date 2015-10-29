@@ -65,5 +65,3 @@ extension Double {
 }
 
 
-
-let puzzle = Puzzle.sharedInstance

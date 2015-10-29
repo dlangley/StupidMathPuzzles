@@ -9,6 +9,8 @@
 import Foundation
 
 
+let puzzle = Puzzle.sharedInstance
+
 extension Int {
     var list : [Int] {
         get {
